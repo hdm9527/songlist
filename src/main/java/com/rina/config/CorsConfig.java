@@ -5,28 +5,25 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * 跨域配置
+ * 跨域相关的配置类
  *
  * @author arvin
- * @date 2022/02/15
+ * @date 2022/02/16
  */
 @Configuration
-public class CorsConfig implements WebMvcConfigurer {
+public class CorsConfig {
 
-	@Override
-	public void addCorsMappings(CorsRegistry registry) {
-		WebMvcConfigurer.super.addCorsMappings(registry);
-		registry.addMapping("/**")
-				.allowedHeaders("*")
-				.allowedMethods("POST", "GET", "DELETE", "PUT")
-				.allowedOrigins("*")
-				.exposedHeaders("*")
-				.allowCredentials(true).maxAge(3600);
-	}
+//	@Override
+//	public void addCorsMappings(CorsRegistry registry) {
+//		registry.addMapping("/**")
+//				.allowedHeaders("*")
+//				.allowedMethods("POST", "GET", "DELETE", "PUT")
+//				.allowedOrigins("*")
+//				.exposedHeaders("*")
+//				.allowCredentials(true).maxAge(3600);
+//	}
 
 	@Bean
 	public CorsFilter corsFilter() {
