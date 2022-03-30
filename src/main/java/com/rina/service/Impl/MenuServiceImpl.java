@@ -166,10 +166,8 @@ public class MenuServiceImpl implements MenuService {
 							.updateBy(x.getUpdateBy())
 							.build())
 					.collect(Collectors.toList());
-			menuDtos.forEach(x -> {
-				Optional.ofNullable(x.getParentId())
-						.ifPresent(parentId -> x.setParentName(menuMapper.getOneMenu(parentId).getMenuName()));
-			});
+			menuDtos.forEach(x -> Optional.ofNullable(x.getParentId())
+					.ifPresent(parentId -> x.setParentName(menuMapper.getOneMenu(parentId).getMenuName())));
 			return menuDtos;
 		} else {
 			return roleMenuMapper.findMenuByRole(roleId)
