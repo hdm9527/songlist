@@ -91,7 +91,7 @@ public class MenuServiceImpl implements MenuService {
 					.menuName(menuDto.getName())
 					.menuIcon(menuDto.getIcon())
 					.menuUrl(menuDto.getUrl())
-					.menuParentId(menuDto.getParentId())
+					.menuParentId(menuDto.getParentId() == 0 ? null : menuDto.getParentId())
 					.menuOrderValue(menuDto.getOrderValue())
 					.createBy(currentUser)
 					.createTime(new Date())
@@ -125,7 +125,7 @@ public class MenuServiceImpl implements MenuService {
 			if (dataUsableCheck(menuDto.getUrl())) {
 				menu = menu.withMenuUrl(menuDto.getUrl());
 			}
-			menu = menu.withMenuParentId(menuDto.getParentId());
+			menu = menu.withMenuParentId(menuDto.getParentId() == 0 ? null : menuDto.getParentId());
 			if (dataUsableCheck(menuDto.getOrderValue())) {
 				menu = menu.withMenuOrderValue(menuDto.getOrderValue());
 			}
