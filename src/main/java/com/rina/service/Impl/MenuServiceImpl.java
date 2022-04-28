@@ -15,9 +15,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -36,7 +35,7 @@ public class MenuServiceImpl implements MenuService {
 
 	@Override
 	public Resp treeMenus() {
-		final Long roleId = MyThreadLocal.get().getRoleId();
+		final Long roleId = Long.valueOf(MyThreadLocal.get().get("roleId"));
 		log.info("当前权限ID为：{}", roleId);
 
 		final List<MenuDto> menuDtos = queryMenus2menuDtos(roleId);
@@ -81,7 +80,8 @@ public class MenuServiceImpl implements MenuService {
 
 	@Override
 	public Resp editMenu(MenuDto menuDto) {
-		final String currentUser = MyThreadLocal.get().getUserName();
+		final String currentUser = MyThreadLocal.get().get("userName");
+		log.info("当前用户为：{}", currentUser);
 
 		int menuResult = 0;
 		int roleResult = 0;
@@ -154,34 +154,56 @@ public class MenuServiceImpl implements MenuService {
 	 */
 	private List<MenuDto> queryMenus2menuDtos(Long roleId) {
 		if (roleId == null) {
-			final List<MenuDto> menuDtos = menuMapper.getAllMenus()
-					.stream().map(x -> MenuDto.builder()
-							.id(x.getMenuId())
-							.name(x.getMenuName())
-							.icon(x.getMenuIcon())
-							.url(x.getMenuUrl())
-							.parentId(x.getMenuParentId())
-							.orderValue(x.getMenuOrderValue())
-							.createBy(x.getCreateBy())
-							.updateBy(x.getUpdateBy())
-							.build())
+			List<MenuDto> menuDtos =menuMapper.getAllMenus()
+					.stream().map(setMenu2menuDto())
 					.collect(Collectors.toList());
 			menuDtos.forEach(x -> Optional.ofNullable(x.getParentId())
 					.ifPresent(parentId -> x.setParentName(menuMapper.getOneMenu(parentId).getMenuName())));
 			return menuDtos;
 		} else {
-			return roleMenuMapper.findMenuByRole(roleId)
-					.stream().map(x -> MenuDto.builder()
-							.id(x.getMenuId())
-							.name(x.getMenu().getMenuName())
-							.icon(x.getMenu().getMenuIcon())
-							.url(x.getMenu().getMenuUrl())
-							.parentId(x.getMenu().getMenuParentId())
-							.orderValue(x.getMenu().getMenuOrderValue())
+			List<Menu> menus = roleMenuMapper.findMenuByRole(roleId)
+					.stream().map(x -> Menu.builder()
+							.menuId(x.getMenuId())
+							.menuName(x.getMenu().getMenuName())
+							.menuUrl(x.getMenu().getMenuUrl())
+							.menuIcon(x.getMenu().getMenuIcon())
+							.menuParentId(x.getMenu().getMenuParentId())
+							.menuOrderValue(x.getMenu().getMenuOrderValue())
 							.createBy(x.getMenu().getCreateBy())
+							.createTime(x.getMenu().getCreateTime())
 							.updateBy(x.getMenu().getUpdateBy())
+							.updateTime(x.getMenu().getUpdateTime())
 							.build())
 					.collect(Collectors.toList());
+			List<Menu> menus2 = new ArrayList<>(menus);
+			menus.forEach(x -> {
+				Menu menu2 = null;
+				if (x.getMenuParentId() != null) {
+					menu2 = menuMapper.getOneMenu(x.getMenuParentId());
+				}
+				if (menu2 != null && !menus.contains(menu2)) {
+					menus2.add(menu2);
+				}
+			});
+			return menus2.stream().map(setMenu2menuDto())
+					.collect(Collectors.toList());
 		}
+	}
+
+	/**
+	 * 将Menu转换为MenuDto
+	 * @return
+	 */
+	private Function<Menu, MenuDto> setMenu2menuDto() {
+		return x -> MenuDto.builder()
+				.id(x.getMenuId())
+				.name(x.getMenuName())
+				.icon(x.getMenuIcon())
+				.url(x.getMenuUrl())
+				.parentId(x.getMenuParentId())
+				.orderValue(x.getMenuOrderValue())
+				.createBy(x.getCreateBy())
+				.updateBy(x.getUpdateBy())
+				.build();
 	}
 }
