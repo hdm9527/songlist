@@ -12,12 +12,12 @@ logging:
 
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://${DATABASE_URL}?useSSL=false&characterEncoding=UTF-8&allowMultiQueries=true
-    username: ${DATABASE_USERNAME}
-    password: ${DATABASE_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/minami?useSSL=false&characterEncoding=UTF-8&allowMultiQueries=true
+    username: root
+    password: 123456
   profiles:
-    active: ${SPRING_ACTIVE_PROFILE:prod}
+    active: dev
 
 mybatis:
   type-aliases-package: com.rina.domain
@@ -34,4 +34,4 @@ pagehelper:
 
 rina:
   jwt:
-    token-expire-time: ${TOKEN_EXPIRE_TIME:60*1000}
+    token-expire-time: 24*60*60*1000

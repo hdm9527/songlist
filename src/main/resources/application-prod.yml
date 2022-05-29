@@ -1,6 +1,6 @@
 logging:
   file:
-    path: /var/rina_log
+    path: /var/minami_log
   level:
     com:
       rina: error

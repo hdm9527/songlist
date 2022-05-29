@@ -2,269 +2,846 @@
 -- Table structure for menu
 -- ----------------------------
 
-INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_icon`, `menu_url`, `menu_parent_id`, `menu_order_value`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (1, '系统管理', 'iconfont icon-activity', '', NULL, 1, 'admin', NOW(), 'admin', NOW());
-INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_icon`, `menu_url`, `menu_parent_id`, `menu_order_value`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (2, '用户展示', 'iconfont icon-createtask', NULL, NULL, 2, 'admin', NOW(), 'admin', NOW());
-INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_icon`, `menu_url`, `menu_parent_id`, `menu_order_value`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (3, '用户管理', 'iconfont icon-workbench', '/pc/system/users', 1, 1, 'admin', NOW(), 'admin', NOW());
-INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_icon`, `menu_url`, `menu_parent_id`, `menu_order_value`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (4, '角色管理', 'iconfont icon-group', '/pc/system/role', 1, 2, 'admin', NOW(), 'admin', NOW());
-INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_icon`, `menu_url`, `menu_parent_id`, `menu_order_value`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (5, '菜单管理', 'iconfont icon-workbench', '/pc/system/menu', 1, 3, 'admin', NOW(), 'admin', NOW());
-INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_icon`, `menu_url`, `menu_parent_id`, `menu_order_value`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (6, '歌单展示', 'iconfont icon-document', '/pc/show/song-list', 2, 1, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_icon`, `menu_url`, `menu_parent_id`, `menu_order_value`, `create_by`,
+                    `create_time`, `update_by`, `update_time`)
+VALUES (1, '系统管理', 'iconfont icon-activity', '', NULL, 1, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_icon`, `menu_url`, `menu_parent_id`, `menu_order_value`, `create_by`,
+                    `create_time`, `update_by`, `update_time`)
+VALUES (2, '用户展示', 'iconfont icon-createtask', NULL, NULL, 2, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_icon`, `menu_url`, `menu_parent_id`, `menu_order_value`, `create_by`,
+                    `create_time`, `update_by`, `update_time`)
+VALUES (3, '用户管理', 'iconfont icon-workbench', '/pc/system/users', 1, 1, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_icon`, `menu_url`, `menu_parent_id`, `menu_order_value`, `create_by`,
+                    `create_time`, `update_by`, `update_time`)
+VALUES (4, '角色管理', 'iconfont icon-group', '/pc/system/role', 1, 2, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_icon`, `menu_url`, `menu_parent_id`, `menu_order_value`, `create_by`,
+                    `create_time`, `update_by`, `update_time`)
+VALUES (5, '菜单管理', 'iconfont icon-workbench', '/pc/system/menu', 1, 3, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_icon`, `menu_url`, `menu_parent_id`, `menu_order_value`, `create_by`,
+                    `create_time`, `update_by`, `update_time`)
+VALUES (6, '歌单展示', 'iconfont icon-document', '/pc/show/song-list', 2, 1, 'admin', NOW(), 'admin', NOW());
 
 -- ----------------------------
 -- Table structure for role
 -- ----------------------------
-INSERT INTO `role` (`role_id`, `role_name`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (1, 'admin', 'admin', NOW(), 'admin', NOW());
-INSERT INTO `role` (`role_id`, `role_name`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (2, 'guest', 'admin', NOW(), 'admin', NOW());
+INSERT INTO `role` (`role_id`, `role_name`, `create_by`, `create_time`, `update_by`, `update_time`)
+VALUES (1, 'admin', 'admin', NOW(), 'admin', NOW());
+INSERT INTO `role` (`role_id`, `role_name`, `create_by`, `create_time`, `update_by`, `update_time`)
+VALUES (2, 'guest', 'admin', NOW(), 'admin', NOW());
 
 -- ----------------------------
 -- Table structure for role_menu
 -- ----------------------------
-INSERT INTO `role_menu` (`role_id`, `menu_id`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (1, 1, 'admin', NOW(), 'admin', NOW());
-INSERT INTO `role_menu` (`role_id`, `menu_id`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (1, 2, 'admin', NOW(), 'admin', NOW());
-INSERT INTO `role_menu` (`role_id`, `menu_id`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (1, 3, 'admin', NOW(), 'admin', NOW());
-INSERT INTO `role_menu` (`role_id`, `menu_id`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (1, 4, 'admin', NOW(), 'admin', NOW());
-INSERT INTO `role_menu` (`role_id`, `menu_id`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (1, 5, 'admin', NOW(), 'admin', NOW());
-INSERT INTO `role_menu` (`role_id`, `menu_id`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (1, 6, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `role_menu` (`role_id`, `menu_id`, `create_by`, `create_time`, `update_by`, `update_time`)
+VALUES (1, 1, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `role_menu` (`role_id`, `menu_id`, `create_by`, `create_time`, `update_by`, `update_time`)
+VALUES (1, 2, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `role_menu` (`role_id`, `menu_id`, `create_by`, `create_time`, `update_by`, `update_time`)
+VALUES (1, 3, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `role_menu` (`role_id`, `menu_id`, `create_by`, `create_time`, `update_by`, `update_time`)
+VALUES (1, 4, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `role_menu` (`role_id`, `menu_id`, `create_by`, `create_time`, `update_by`, `update_time`)
+VALUES (1, 5, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `role_menu` (`role_id`, `menu_id`, `create_by`, `create_time`, `update_by`, `update_time`)
+VALUES (1, 6, 'admin', NOW(), 'admin', NOW());
 
 -- ----------------------------
 -- Table structure for role_user
 -- ----------------------------
-INSERT INTO `role_user` (`role_id`, `user_id`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (1, 1, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `role_user` (`role_id`, `user_id`, `create_by`, `create_time`, `update_by`, `update_time`)
+VALUES (1, 1, 'admin', NOW(), 'admin', NOW());
 
 -- ----------------------------
 -- Table structure for song_list
 -- ----------------------------
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (1, '残酷な天使のテーゼ', '高橋洋子', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (2, 'Oblivious', 'Kalafina', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (3, 'あなたがいた森', '樹海', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (4, 'disillusion', 'タイナカ　サイチ', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (5, '愛き夜道', '魂音泉', '日文', 'admin', NOW(), 'admin', '2022-02-06 06:47:07');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (6, '夢想歌', 'Suara', '日文', 'admin', NOW(), 'admin', '2022-02-06 06:47:07');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (7, 'feel it still', 'Portugal. The Man', '英文', 'admin', NOW(), 'admin', '2022-02-06 06:49:04');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (8, 'same old love', 'Selena Gomez', '英文', 'admin', NOW(), 'admin', '2022-02-06 06:49:04');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (9, 'First Love', '宇多田ヒカル', '日文', 'admin', NOW(), 'admin', '2022-02-06 06:47:07');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (10, 'Beautiful World', '宇多田ヒカル', '日文', 'admin', NOW(), 'admin', '2022-02-06 06:47:07');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (11, 'トリノコシティ', 'vocaloid', '日文', 'admin', NOW(), 'admin', '2022-02-06 06:47:07');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (12, 'zoetrope', 'やなぎなぎ', '日文', 'admin', NOW(), 'admin', '2022-02-06 06:47:07');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (13, 'mermaid festa vol. 1', 'μ''s', '日文', 'admin', NOW(), 'admin', '2022-02-06 06:47:07');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (14, '影炎≒Variation', 'vocaloid', '日文', 'admin', NOW(), 'admin', '2022-02-06 06:47:07');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (15, '海色', 'AKINO', '日文', 'admin', NOW(), 'admin', '2022-02-06 06:47:07');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (16, '-ERROR', 'vocaloid', '日文', 'admin', NOW(), 'admin', '2022-02-06 06:47:07');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (17, 'シャルル', 'vocaloid', '日文', 'admin', NOW(), 'admin', '2022-02-06 06:47:07');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (18, 'ヒバナ', 'vocaloid', '日文', 'admin', NOW(), 'admin', '2022-02-06 06:47:07');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (19, '千本桜', 'vocaloid', '日文', 'admin', NOW(), 'admin', '2022-02-06 06:47:07');
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (20, 'KING', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (21, '乙女解剖', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (22, 'ロキ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (23, '恋は戦争', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (24, 'ブリキノダンス', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (25, '天ノ弱', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (26, 'からくりピエロ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (27, 'ロミオとシンデレラ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (28, 'ロストワンの号哭', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (29, '東京テディベア', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (30, '弱虫モンブラン', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (31, '恋愛裁判', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (32, 'ドーナツホール', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (33, '脳漿炸裂ガール', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (34, 'メルト', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (35, '砂の惑星', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (36, '六兆年と一夜物語', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (37, '太陽系ディスコ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (38, 'メランコリック', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (39, 'マトリョシカ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (40, 'いーあるふぁんくらぶ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (41, '心做し', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (42, 'パンダヒーロー', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (43, '独りんぼエンヴィー', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (44, '劣等上等', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (45, '妄想税', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (46, '裏表ラバーズ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (47, 'magnet', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (48, 'ワールドイズマイン', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (49, '夜咄ディセイブ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (50, 'え？あぁ、そう。', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (51, 'Just Be Friends', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (52, 'ブラック✭ロックシューター', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (53, 'ローリンガール', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (54, 'モザイクロール', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (55, 'Calc.', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (56, 'カゲロウデイズ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (57, 'チルドレンレコード', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (58, '二息歩行', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (59, 'バレリーコ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (60, '右肩の蝶', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (61, 'アイロニ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (62, '地球最後の告白を', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (63, 'セツナトリップ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (64, '炉心融解', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (65, '1925', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (66, 'サリシノハラ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (67, 'アンハッピーリフレイン', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (68, 'ハッピーシンセサイザ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (69, 'インビジブル', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (70, '深海少女', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (71, 'fire flower', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (72, 'ECHO', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (73, 'ギガンティックotn', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (74, '嗚呼、素晴らしきニャン生', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (75, 'リンネ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (76, 'いかないで', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (77, 'BAD END NIGHT', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (78, '拝啓ドッペルゲンガー', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (79, 'GIMME X GIMME', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (80, 'from y to y', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (81, 'blessing', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (82, '初めての恋が終わる時', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (83, 'いろは唄', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (84, '十面相', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (85, 'ハロ/ハワユ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (86, '再教育', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (87, 'ネトゲ廃人シュプレヒコール', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (88, 'バビロン', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (89, '虎視眈々', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (90, '疑心暗鬼', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (91, '心拍数＃0822', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (92, '悪ノ召使', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (93, 'サンドリヨン', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (94, 'Ready Steady', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (95, 'ピエロ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (96, '人生リセットボタン', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (97, 'ケッペキショウ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (98, '天樂', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (99, 'ルカルカナイトフィーバー', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (100, '繰り返し一粒', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (101, '敗北の少年', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (102, 'リモコン', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (103, 'glow', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (104, 'オレンジ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (105, 'シリョクケンサ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (106, 'おちゃめ機能', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (107, 'ガランド', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (108, '小夜子', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (109, '自傷無色', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (110, '脳内革命ガール', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (111, '結んで開いて羅刹と骸', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (112, 'パラジクロロベンゼン', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (113, '#NAME?', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (114, 'トリノコシティ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (115, 'Dear', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (116, 'ツギハギスタッカート', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (117, 'ACUTE', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (118, 'WAVE', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (119, 'tell your world', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (120, 'しんでしまうとはなさけない', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (121, 'just a game', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (122, 'ペテン師が笑う頃に', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (123, '恋愛勇者', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (124, '告白予行練習', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (125, '夕立のりぼん', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (126, 'FREELY TOMORROW', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (127, 'NO LOGIC', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (128, 'しわ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (129, 'MASKED BITCH', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (130, '悪ノ娘', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (131, 'スキキライ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (132, '会いたい', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (133, 'Mr. Music', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (134, 'Leia', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (135, 'カミサマネジマキ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (136, 'エゴママ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (137, '歌に形はないけれど', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (138, '一心不乱', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (139, '世田谷ナイトサファリ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (140, 'キャットフード', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (141, 'リスキーゲーム', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (142, '愛言葉', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (143, '心臓デモクラシー', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (144, '上弦の月', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (145, 'Hello, worker', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (146, 'elect', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (147, 'とても痛い痛がりたい', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (148, 'イノコリ先生', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (149, 'ドレミファロンド', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (150, 'Badbye', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (151, '被害妄想携帯女子', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (152, 'こちら、幸福安心委員会', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (153, 'ジッタードール', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (154, '下剋上', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (155, 'トキヲ・ファンカ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (156, 'アヤノの幸福理論', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (157, 'rain stops, good-bye', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (158, '火葬曲', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (159, 'ラズベリーモンスター', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (160, '夏に去りし君を思フ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (161, 'Sweet Devil', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (162, 'ポーカーフェイス', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (163, 'SPICE!', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (164, '桜前線異常ナシ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (165, '刹那プラス', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (166, 'Shake it!', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (167, '少年と魔法のロボット', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (168, 'グリグリメガネと月光虫', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (169, 'Getcha!', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (170, 'ヨンジュウナナ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (171, 'ローリンガール', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (172, '文学少年の憂鬱', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (173, 'Palette', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (174, '純情スカート', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (175, 'KILLER LADY', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (176, '僕は初音ミクとキスをした', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (177, 'ggrks - ググレカスー', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (178, '泣き虫カレシ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (179, '星の唄', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (180, '夕日坂', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (181, '恋愛フィロソフィア', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (182, 'connecting', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (183, 'カーニバル', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (184, 'bouquet', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (185, 'Perfect Crime', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (186, '春に一番近い街', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (187, 'Loops & loops', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (188, 'solitude', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (189, 'it''s no way', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (190, 'ANIMAる', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (191, '飴か夢', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (192, 'HOPE', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (193, '初恋の絵本', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (194, 'カガリビト', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (195, '疑心暗鬼', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (196, '心裏×Navigation', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (197, '東京電脳探偵団', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (198, '影炎 Variation', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (199, 'テロメアの産声', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (200, 'ヒビカセ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (201, '狂喜乱舞', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (202, 'knife', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (203, '月・影・舞・華', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (204, '笹舟', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (205, 'なまえのないうた', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (206, 'MUGIC', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (207, 'Reon', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (208, 'マリオネットシンドローム', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (209, '空想少女への恋手紙', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (210, '蛍', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (211, '6900000000', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (212, 'cat''s dance', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (213, '恋空予報', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (214, '百年夜行', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (215, 'te-yut-te', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (216, 'ur-style', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (217, 'Sweets & Bitters', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (218, '狐ノ嫁入り', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (219, 'めめめめめ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (220, '花のうた', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (221, '空間 formation', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (222, 'if', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (223, 'smiling', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (224, 'ponponpon', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (225, '君が好き', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (226, '感弩≠Reduction', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (227, 'flashback', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (228, 'とおせんぼ', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (229, 'daze', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
-INSERT INTO rina.song_list (song_id, song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES (230, 'days', 'vocaloid', '日文', 'admin', NOW(), 'admin', NOW());
+INSERT INTO song_list (song_name, song_artist, song_language, create_by, create_time, update_by, update_time) VALUES
+('给我一个理由忘记', 'A-Lin', '中文', 'admin', NOW(), 'admin', NOW()),
+('千年之恋', 'F.I.R', '中文', 'admin', NOW(), 'admin', NOW()),
+('我们的爱', 'F.I.R', '中文', 'admin', NOW(), 'admin', NOW()),
+('月牙湾', 'F.I.R', '中文', 'admin', NOW(), 'admin', NOW()),
+('我会自己上厕所', '宝宝巴士', '中文', 'admin', NOW(), 'admin', NOW()),
+('孤勇者', '陈奕迅', '中文', 'admin', NOW(), 'admin', NOW()),
+('战争世界', '陈姿彤', '中文', 'admin', NOW(), 'admin', NOW()),
+('阿拉斯加海湾', '菲道尔', '中文', 'admin', NOW(), 'admin', NOW()),
+('差不多姑娘', 'G.E.M.邓紫棋', '中文', 'admin', NOW(), 'admin', NOW()),
+('光年之外', 'G.E.M.邓紫棋', '中文', 'admin', NOW(), 'admin', NOW()),
+('句号', 'G.E.M.邓紫棋', '中文', 'admin', NOW(), 'admin', NOW()),
+('来自天堂的魔鬼', 'G.E.M.邓紫棋', '中文', 'admin', NOW(), 'admin', NOW()),
+('童话', '光良', '中文', 'admin', NOW(), 'admin', NOW()),
+('让风告诉你(原神)', '花玲/喵☆酱/宴宁/kinsen', '中文', 'admin', NOW(), 'admin', NOW()),
+('月半小夜曲', '李克勤', '中文', 'admin', NOW(), 'admin', NOW()),
+('雨蝶(还珠格格)', '李翊君', '中文', 'admin', NOW(), 'admin', NOW()),
+('曹操', '林俊杰', '中文', 'admin', NOW(), 'admin', NOW()),
+('黑键', '林俊杰', '中文', 'admin', NOW(), 'admin', NOW()),
+('她说', '林俊杰', '中文', 'admin', NOW(), 'admin', NOW()),
+('恭喜发财', '刘德华', '中文', 'admin', NOW(), 'admin', NOW()),
+('勾指起誓', '洛天依', '中文', 'admin', NOW(), 'admin', NOW()),
+('达拉崩吧', '洛天依/言和', '中文', 'admin', NOW(), 'admin', NOW()),
+('热爱105度的酒', '美波七海', '中文', 'admin', NOW(), 'admin', NOW()),
+('飞鸟和蝉', '任然', '中文', 'admin', NOW(), 'admin', NOW()),
+('左手指月', '萨顶顶', '中文', 'admin', NOW(), 'admin', NOW()),
+('夜空中最亮的星', '逃跑计划', '中文', 'admin', NOW(), 'admin', NOW()),
+('夏天的风', '温岚', '中文', 'admin', NOW(), 'admin', NOW()),
+('盛夏光年', '五月天', '中文', 'admin', NOW(), 'admin', NOW()),
+('学猫叫', '小潘潘/小峰峰', '中文', 'admin', NOW(), 'admin', NOW()),
+('神女劈观(原神)', '杨扬', '中文', 'admin', NOW(), 'admin', NOW()),
+('梦回还(狐妖小红娘 OP)', '呦猫UNEKO', '中文', 'admin', NOW(), 'admin', NOW()),
+('欧若拉', '张韶涵', '中文', 'admin', NOW(), 'admin', NOW()),
+('隐形的翅膀', '张韶涵', '中文', 'admin', NOW(), 'admin', NOW()),
+('偏爱(仙剑三)', '张芸京', '中文', 'admin', NOW(), 'admin', NOW()),
+('思念是一种病', '张震岳/蔡健雅', '中文', 'admin', NOW(), 'admin', NOW()),
+('发财发福中国年', '中国娃娃', '中文', 'admin', NOW(), 'admin', NOW()),
+('告白气球', '周杰伦', '中文', 'admin', NOW(), 'admin', NOW()),
+('龙卷风', '周杰伦', '中文', 'admin', NOW(), 'admin', NOW()),
+('七里香', '周杰伦', '中文', 'admin', NOW(), 'admin', NOW()),
+('好想你', '朱主爱', '中文', 'admin', NOW(), 'admin', NOW()),
+('バイバイ/再见( 少年同盟 OP)', '7!!', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Flyers!!!/飞人(偶像大师)', '765 MILLION ALLSTARS', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('恋音と雨空', 'AAA', '日语', 'admin', NOW(), 'admin', NOW()),
+('踊', 'Ado', '日语', 'admin', NOW(), 'admin', NOW()),
+('うっせぇわ/烦死了', 'Ado', '日语', 'admin', NOW(), 'admin', NOW()),
+('阿修罗ちゃん/小阿修罗', 'Ado', '日语', 'admin', NOW(), 'admin', NOW()),
+('Brave Shine/闪耀的勇气(Fate/stay night OP)', 'Aimer', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('カタオモイ/单相思', 'Aimer', '日语', 'admin', NOW(), 'admin', NOW()),
+('创圣のアクエリオン(創聖的大天使 OP)', 'AKINO', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('手紙～拝啓十五の君へ～', 'Angela Aki', '日语', 'admin', NOW(), 'admin', NOW()),
+('ソラニンㄒ/Soranin', 'ASIAN KUNG-FU GENERATION', '日语', 'admin', NOW(), 'admin', NOW()),
+('リライト/Rewrite(钢之炼金术师 OP)', 'ASIAN KUNG-FU GENERATION', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('はなまるぴっぴはよいこだけ/花丸哔哔只给好孩子', 'a応p', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('おどるポンポコリン(樱桃小丸子 ED)', 'B.B.クィーンズ', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('クリスマスソング/圣诞歌(朝五晚九)', 'back number', '日语', 'admin', NOW(), 'admin', NOW()),
+('ギミギミ', 'BENI', '日语', 'admin', NOW(), 'admin', NOW()),
+('FANTASTIC BABY', 'BIGBANG', '日语', 'admin', NOW(), 'admin', NOW()),
+('カルマ', 'BUMP OF CHICKEN', '日语', 'admin', NOW(), 'admin', NOW()),
+('天体观测', 'BUMP OF CHICKEN', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('風吹けば恋/风儿吹来恋爱', 'Chatmonchy', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('恋の煙', 'Chatmonchy', '日语', 'admin', NOW(), 'admin', NOW()),
+('湯気', 'Chatmonchy', '日语', 'admin', NOW(), 'admin', NOW()),
+('シャングリラ(工作狂人ED)', 'Chatmonchy', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ウルフ/狼', 'CHiCO with HoneyWorks', '日语', 'admin', NOW(), 'admin', NOW()),
+('今日もサクラ舞う暁に/今天也在樱花飞舞之时(银魂 OP)', 'CHiCO with HoneyWorks', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('アイのシナリオ/爱的剧本(魔术快斗1412 OP)', 'CHiCO with HoneyWorks', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ハートの主張/心的主张', 'CHiCO with HoneyWorks', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('日曜日の秘密/星期天的秘密', 'CHiCO/锁那', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('プライド革命/自尊心革命(银魂° OP)', 'CHiCOwith HoneyWorks', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('決戦スピリット/决战精神(排球少年第四季ED)', 'CHiCOwith HoneyWorks', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('コネクト/Connect(魔法少女小圆 OP)', 'ClariS', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('恋におちたら/如果落入了恋爱', 'Crystal Kay', '日语', 'admin', NOW(), 'admin', NOW()),
+('ヒプノシスマイク', 'Division Battle Anthem-/Division All Stars', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('曇天/阴天(银魂 OP)', 'DOES', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ようかい体操第一/妖怪体操第一(妖怪手表 ED)', 'Dream5', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('The Everlasting Guilty Crown/永恒的罪恶之冠(罪恶王冠)', 'EGOIST', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('名前のない怪物/没有名字的怪物(PSYCHO-PASS ED)', 'EGOIST', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ジターバグ', 'ELLEGARDEN', '日语', 'admin', NOW(), 'admin', NOW()),
+('東京テディベア', 'EvaLia', '日语', 'admin', NOW(), 'admin', NOW()),
+('Lovers Again', 'EXILE', '日语', 'admin', NOW(), 'admin', NOW()),
+('Let Me Hear(寄生兽 OP)', 'Fear, and Loathing in Las Vegas', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('DAN DAN 心魅かれてく/心渐渐被你吸引(龙珠 )', 'FIELD OF VIEW', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('GO!!!(火影忍者 OP)', 'FLOW', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('パプリカ/红辣椒', 'Foorin', '日语', 'admin', NOW(), 'admin', NOW()),
+('only my railgun(科学超电磁炮 OP)', 'fripSide', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('アドバンス·アドベンチャー/冒险·前进(宝可梦)', 'GARDEN', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('梦・花火', 'GARNET CROW', '日语', 'admin', NOW(), 'admin', NOW()),
+('PiNK CAT', 'GARNiDELiA', '日语', 'admin', NOW(), 'admin', NOW()),
+('浮舟', 'GO!GO!7188', '日语', 'admin', NOW(), 'admin', NOW()),
+('光るなら/若能绽放光芒(四月是你的谎言 OP)', 'Goose house', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('愛唄', 'GReeeeN', '日语', 'admin', NOW(), 'admin', NOW()),
+('刹那', 'GReeeeN', '日语', 'admin', NOW(), 'admin', NOW()),
+('キセキ/奇迹', 'GReeeeN', '日语', 'admin', NOW(), 'admin', NOW()),
+('ヒトガタ/人型(VIRTUALSAN-LOOKING ED)', 'HIMEHINA', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Shining ray', 'Janne Da Arc', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('月光花(怪医黑杰克 OP)', 'Janne Da Arc', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Here(魔法使的新娘 OP)', 'JUNNA', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('LOVE! THUNDER GLOW(超时空要塞Δ ED)', 'JUNNA', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('さよならのかわりに/代替说再见', 'Kain', '日语', 'admin', NOW(), 'admin', NOW()),
+('ないものねだり', 'KANA-BOON', '日语', 'admin', NOW(), 'admin', NOW()),
+('シルエット', 'KANA-BOON', '日语', 'admin', NOW(), 'admin', NOW()),
+('GO GO Summer!', 'KARA', '日语', 'admin', NOW(), 'admin', NOW()),
+('ジャンピン/Jumpin'', 'KARA', '日语', 'admin', NOW(), 'admin', NOW()),
+('Real Face', 'KAT-TUN', '日语', 'admin', NOW(), 'admin', NOW()),
+('白日', 'King Gnu', '日语', 'admin', NOW(), 'admin', NOW()),
+('Best Friend', 'Kiroro', '日语', 'admin', NOW(), 'admin', NOW()),
+('KISSして/亲吻', 'KOH+', '日语', 'admin', NOW(), 'admin', NOW()),
+('最爱', 'KOH+', '日语', 'admin', NOW(), 'admin', NOW()),
+('鳥の詩(AIR)', 'Lia', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('紅蓮の弓矢(进击的巨人 OP)', 'Linked Horizon', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('夢ファンファーレ/梦想应援歌(能奔跑下去太好了 OP)', 'LIPxLIP', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Rising Hope', 'LiSA', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Adamas(刀剑神域 OP)', 'LiSA', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Catch the Moment', 'LiSA', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Crossing Field/交叉领域(刀剑神域 OP)', 'LiSA', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('紅蓮華(鬼滅之刃 OP)', 'LiSA', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('oath sign/誓约之印(Fate/Zero OP)', 'LiSA', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('炎(鬼滅之刃)', 'LiSA', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('一番の宝物/最珍贵的宝物(Angel Beats! ED)', 'LiSA', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('再会', 'LiSA/ Uru', '日语', 'admin', NOW(), 'admin', NOW()),
+('爱迷エレジー /爱迷挽歌', 'marina', '日语', 'admin', NOW(), 'admin', NOW()),
+('逢いたくていま/现在好想见你(仁医)', 'MISIA', '日语', 'admin', NOW(), 'admin', NOW()),
+('夜空。', 'Miwa', '日语', 'admin', NOW(), 'admin', NOW()),
+('aLIEz/核爆神曲(ALDNOAH ZERO ED)', 'Mizuki', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('小さな恋のうた/小小恋歌(求婚大作战)', 'MONGOL800', '日语', 'admin', NOW(), 'admin', NOW()),
+('HANABI(code blue)', 'Mr.Children', '日语', 'admin', NOW(), 'admin', NOW()),
+('奇跡の地球', 'Mr.Children', '日语', 'admin', NOW(), 'admin', NOW()),
+('In the Morning', 'Mrs. GREEN APPLE', '日语', 'admin', NOW(), 'admin', NOW()),
+('StaRt', 'Mrs. GREEN APPLE', '日语', 'admin', NOW(), 'admin', NOW()),
+('インフェルノ/地狱(炎炎消防队 OP)', 'Mrs. GREEN APPLE', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('L.L.L', 'MYTH&ROID', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('かかってこいよ(MEGALO BOX ED)', 'NakamuraEmi', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('インドア系ならトラックメイカー/室内系的TrackMaker', 'Nicamoq', '日语', 'admin', NOW(), 'admin', NOW()),
+('Answer(恶魔奶爸 ED)', 'No3b', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Bad Apple!!(東方Project)', 'Nomico', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('完全感覚Dreamer', 'ONE OK ROCK', '日语', 'admin', NOW(), 'admin', NOW()),
+('キミシダイ列車', 'ONE OK ROCK', '日语', 'admin', NOW(), 'admin', NOW()),
+('Wherever you are', 'ONE OK ROCK', '日语', 'admin', NOW(), 'admin', NOW()),
+('ロコローション', 'ORANGE RANGE', '日语', 'admin', NOW(), 'admin', NOW()),
+('イケナイ太陽/太阳无用(花样少男少女)', 'ORANGE RANGE', '日语', 'admin', NOW(), 'admin', NOW()),
+('be the one(假面骑士Build OP)', 'PANDORA/Beverly', '日语', 'admin', NOW(), 'admin', NOW()),
+('love the world', 'Perfume', '日语', 'admin', NOW(), 'admin', NOW()),
+('M', 'Princess Princess', '日语', 'admin', NOW(), 'admin', NOW()),
+('Gangnam Style/江南style', 'PSY', '韩语', 'admin', NOW(), 'admin', NOW()),
+('有心論/有心论', 'RADWIMPS', '日语', 'admin', NOW(), 'admin', NOW()),
+('スパークル/火花(你的名字。)', 'RADWIMPS', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('なんでもないや/没什么大不了(你的名字。ED)', 'RADWIMPS', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('100万回の「I love you」', 'Rake', '日语', 'admin', NOW(), 'admin', NOW()),
+('僕らの手には何もないけど/尽管我们的手中空无一物', 'RAM WIRE', '日语', 'admin', NOW(), 'admin', NOW()),
+('新宝島', 'sakanaction', '日语', 'admin', NOW(), 'admin', NOW()),
+('ダイアモンド クレバス/钻石裂痕(超时空要塞F ED)', 'Sheryl Nome starring May'n', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('1/3の純情な感情', 'SIAM SHADE', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('チェリボム/樱桃炸弹', 'SILENT SIREN', '日语', 'admin', NOW(), 'admin', NOW()),
+('Lion heart', 'SMAP', '日语', 'admin', NOW(), 'admin', NOW()),
+('世界に一つだけの花/世界上唯一的花', 'SMAP', '日语', 'admin', NOW(), 'admin', NOW()),
+('夜空ノムコウ/夜空的彼岸', 'SMAP', '日语', 'admin', NOW(), 'admin', NOW()),
+('青(ワイド!スクランブル)', 'Sonar Pocket', '日语', 'admin', NOW(), 'admin', NOW()),
+('君とまた', 'SPARKLING☆POINT', '日语', 'admin', NOW(), 'admin', NOW()),
+('恋する凡人/恋爱的凡人', 'Spitz', '日语', 'admin', NOW(), 'admin', NOW()),
+('ロビンソン/Robinson', 'Spitz', '日语', 'admin', NOW(), 'admin', NOW()),
+('楓', 'Spitz', '日语', 'admin', NOW(), 'admin', NOW()),
+('RAGE OF DUST(机动战士高达 OP)', 'SPYAIR', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('イマジネーション(小排球 OP)', 'SPYAIR', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('サムライハート(Some Like It Hot!!)(银魂 ED)', 'SPYAIR', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ひかり/星灯', 'Suara', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('君の知らない物語/你不知道的故事(化物語 ED)', 'supercell', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('How Do I Survive?', 'Superfly', '日语', 'admin', NOW(), 'admin', NOW()),
+('愛をこめて花束を/献上爱的花束(愛迪生之母)', 'Superfly', '日语', 'admin', NOW(), 'admin', NOW()),
+('Deal with the devil(狂賭之淵 OP)', 'Tia', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('宙船(我的老大，我的英雄)', 'TOKIO', '日语', 'admin', NOW(), 'admin', NOW()),
+('HOT LIMIT', 'T· M· Revolution', '日语', 'admin', NOW(), 'admin', NOW()),
+('シュガーソングとビターステップ/Sugar Song and Bitter Step(血界战线 ED)', 'UNISON SQUARE GARDEN', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('SHAMROCK', 'UVERworld', '日语', 'admin', NOW(), 'admin', NOW()),
+('Touch off(约定的梦幻岛 OP)', 'UVERworld', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('僕らの戦場/我们的战场(超时空要塞Δ)', 'Walküre', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('一度だけの恋なら/若是仅此一次的恋爱(超时空要塞Δ OP)', 'Walküre', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('いけないボーダーライン/禁忌的边界线(超时空要塞Δ)', 'Walküre', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ワルキューレがとまらない/女武神永不止步(超时空要塞Δ)', 'Walküre', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('世界が終わるまでは/直到世界的尽头(灌篮高手 ED)', 'WANDS', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('いいから', 'WANIMA', '日语', 'admin', NOW(), 'admin', NOW()),
+('僕らの永遠～何度生まれ変わっても、手を繋ぎたいだけの愛だから～', 'WEAVER', '日语', 'admin', NOW(), 'admin', NOW()),
+('夏祭り/夏祭(ReLIFE ED)', 'Whiteberry', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Secret Answer', 'XYZ', '日语', 'admin', NOW(), 'admin', NOW()),
+('Oz.(国王排名 ED)', 'yama', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('怪物', 'YOASOBI', '日语', 'admin', NOW(), 'admin', NOW()),
+('夜に駆ける/夜跑', 'YOASOBI', '日语', 'admin', NOW(), 'admin', NOW()),
+('again(钢之炼金术师FA OP)', 'YUI', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Gloria', 'YUI', '日语', 'admin', NOW(), 'admin', NOW()),
+('Hello', 'YUI', '日语', 'admin', NOW(), 'admin', NOW()),
+('HELLO ~Paradise Kiss', 'YUI', '日语', 'admin', NOW(), 'admin', NOW()),
+('負けないで/不要认输', 'ZARD', '日语', 'admin', NOW(), 'admin', NOW()),
+('夏を待つセイル(帆)のように/宛若等待夏日的风帆(名侦探柯南)', 'ZARD', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('secret base ～君がくれたもの～(未闻花名 ED)', 'ZONE', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Wonderful Rush', 'μ's', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Snow Halation/雪色光晕(LoveLive! )', 'μ's', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('貴方解剖純愛歌〜死ね〜/你的解剖纯爱歌~去死吧', 'あいみょん', '日语', 'admin', NOW(), 'admin', NOW()),
+('マリーゴールド/万寿菊', 'あいみょん', '日语', 'admin', NOW(), 'admin', NOW()),
+('○○ちゃん', 'あいみょん', '日语', 'admin', NOW(), 'admin', NOW()),
+('マリゴールド/金盏花', 'あいみょん', '日语', 'admin', NOW(), 'admin', NOW()),
+('ぽいぽいぽいぽぽいぽいぽぴー', 'あやまんJAPAN', '日语', 'admin', NOW(), 'admin', NOW()),
+('YELL', 'いきものがかり', '日语', 'admin', NOW(), 'admin', NOW()),
+('SAKURA', 'いきものがかり', '日语', 'admin', NOW(), 'admin', NOW()),
+('気まぐれロマンティック/摇摆不定的浪漫(名人与贫乏太郎)', 'いきものがかり', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('熱情のスペクトラム/热情光谱', 'いきものがかり', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ありがとう/谢谢', 'いきものがかり', '日语', 'admin', NOW(), 'admin', NOW()),
+('ブルーバード/青鸟(火影忍者疾风传 OP)', 'いきものがかり', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('やらないか/呀啦那一卡(粪味噌的技术)', 'いさじ', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('宇宙戦艦ヤマト(宇宙战舰大和号)', 'ささきいさお', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ミカヅキ(乱步奇谭 ED)', 'さユり', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ハッピー・ジャムジャム(可爱巧虎岛 ED)', 'しまじろう', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('組曲『ニコニコ動画』', 'しも', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('daze(目隐都市的演绎者 OP)', 'じん/メイリア', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('風になる(猫的报恩_', 'つじあやの', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('幻想浪漫綺行(is the limit.) (东方Project)', 'めらみぽっぷ', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('一般男性脱糞シリーズ', 'ゆゆうた', '日语', 'admin', NOW(), 'admin', NOW()),
+('たばこ /烟草', 'コレサワ', '日语', 'admin', NOW(), 'admin', NOW()),
+('TSUNAMI', 'サザンオールスターズ', '日语', 'admin', NOW(), 'admin', NOW()),
+('藍/蓝', 'スキマスイッチ', '日语', 'admin', NOW(), 'admin', NOW()),
+('全力少年', 'スキマスイッチ', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('かなで/奏', 'スキマスイッチ', '日语', 'admin', NOW(), 'admin', NOW()),
+('空も飛べるはず/定能飞向天空(白线流)', 'スピッツ', '日语', 'admin', NOW(), 'admin', NOW()),
+('アンパンマンのマーチ/面包超人进行曲', 'ドリーミング', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ダダダダ天使/Dadadada天使', 'ナナヲアカリ', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('チューリングラブ/Turing Love(理科生坠入情网，故尝试证明。 ED)', 'ナナヲアカリ/ Sou', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('No pain,No game(惊爆游戏 OP)', 'ナノ', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('SAVIOR OF SONG(苍蓝钢铁战舰 OP)', 'ナノ/My First Story', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ハム太郎とっとこうた(哈姆太郎 OP)', 'ハムちゃんず', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('夜明け Brand New Days/黎明Brand New Days', 'ベイビーレイズJAPAN', '日语', 'admin', NOW(), 'admin', NOW()),
+('恋のメガラバ', 'マキシマム ザ ホルモン', '日语', 'admin', NOW(), 'admin', NOW()),
+('言って。', 'ヨルシカ', '日语', 'admin', NOW(), 'admin', NOW()),
+('ヒッチコック/Hitchcock', 'ヨルシカ', '日语', 'admin', NOW(), 'admin', NOW()),
+('春泥棒/春天的小偷', 'ヨルシカ', '日语', 'admin', NOW(), 'admin', NOW()),
+('だから僕は音楽を辞めた/所以我放弃了音乐', 'ヨルシカ', '日语', 'admin', NOW(), 'admin', NOW()),
+('粉雪(一公升的眼泪)', 'レミオロメン', '日语', 'admin', NOW(), 'admin', NOW()),
+('心絵', 'ロードオブメジャー', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('明日、僕は君に会いに行く/明天，我要去见你。', 'ワカバ', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ワルキューレは裏切らない', 'ワルキューレ', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('破滅の純情(超时空要塞Δ ED)', 'ワルキューレ', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Baby Don't Cry', '安室奈美恵', '日语', 'admin', NOW(), 'admin', NOW()),
+('ガーネット/Garnet(穿越时空的少女)', '奥华子', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('変わらないもの/不变的永远(穿越时空的少女)', '奥华子', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Buddy(最终流放-银翼之法姆)', '坂本真綾', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ウィーアー!/We are！(海贼王ONE PIECE)', '北谷洋', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('カントリー・ロード/Country Road', '本名阳子', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ナージャ！！(明日的娜嘉 OP)', '本田美奈子', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Last Angel', '滨崎步', '日语', 'admin', NOW(), 'admin', NOW()),
+('My all', '滨崎步', '日语', 'admin', NOW(), 'admin', NOW()),
+('M', '滨崎步', '日语', 'admin', NOW(), 'admin', NOW()),
+('親知らず', '长渕刚', '日语', 'admin', NOW(), 'admin', NOW()),
+('富士サファリパーク', '串田アキラ', '日语', 'admin', NOW(), 'admin', NOW()),
+('中王区', '催眠麦克风/Femme Fatale', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('あゝオオサカdreamin’night', '催眠麦克风/どついたれ本舗', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('NO MORE CRY', 'D-51組合', '日语', 'admin', NOW(), 'admin', NOW()),
+('猫', 'DISH', '日语', 'admin', NOW(), 'admin', NOW()),
+('Danger in my 通学路(千绪的上学路 OP)', '大空直美/小见川千明/本渡枫', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ドラえもんのうた/哆啦A梦之歌', '大杉久美子', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('君じゃなきゃダメみたい/似乎非你不可(月刊少女野崎同学 ED)', '大石昌良', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('CHU-LIP', '大塚愛', '日语', 'admin', NOW(), 'admin', NOW()),
+('PEACH', '大塚愛', '日语', 'admin', NOW(), 'admin', NOW()),
+('黒毛和牛上塩タン焼680円', '大塚愛', '日语', 'admin', NOW(), 'admin', NOW()),
+('星象仪', '大冢爱', '日语', 'admin', NOW(), 'admin', NOW()),
+('さくらんぼ/樱桃', '大塚愛', '日语', 'admin', NOW(), 'admin', NOW()),
+('レイニー・ブルー', '徳永英明', '日语', 'admin', NOW(), 'admin', NOW()),
+('なごり雪/残雪', '德永英明', '日语', 'admin', NOW(), 'admin', NOW()),
+('時の流れに身をまかせ/任时光在身边流逝', '邓丽君', '日语', 'admin', NOW(), 'admin', NOW()),
+('どんなときも。/无论何时', '槇原敬之', '日语', 'admin', NOW(), 'admin', NOW()),
+('Balloons', '东方神起', '韩语', 'admin', NOW(), 'admin', NOW()),
+('Bolero', '东方神起', '日语', 'admin', NOW(), 'admin', NOW()),
+('Share The World(海贼王ONE PIECE OP)', '东方神起', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('SHINE', '东方神起', '日语', 'admin', NOW(), 'admin', NOW()),
+('Stand by U', '东方神起', '日语', 'admin', NOW(), 'admin', NOW()),
+('時ヲ止メテ', '东方神起', '日语', 'admin', NOW(), 'admin', NOW()),
+('どうして君を好きになってしまったんだろう？/为什么我会喜欢上你', '东方神起', '日语', 'admin', NOW(), 'admin', NOW()),
+('MIROTIC/咒文', '东方神起', '日语', 'admin', NOW(), 'admin', NOW()),
+('群青日和', '東京事変', '日语', 'admin', NOW(), 'admin', NOW()),
+('お愿いマッスル/拜托了肌肉(流汗吧!健身少女 OP)', '菲鲁兹·蓝/石川界人', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('虹', '福山雅治', '日语', 'admin', NOW(), 'admin', NOW()),
+('家族になろうよ/成为一家人吧', '福山雅治', '日语', 'admin', NOW(), 'admin', NOW()),
+('桜坂', '福山雅治', '日语', 'admin', NOW(), 'admin', NOW()),
+('残酷な天使のテーゼ/残酷天使的行动纲领(EVA OP)', '高桥洋子', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('魂のルフラン/魂之轮回(EVA)', '高桥洋子', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('マジLOVE1000%/真爱1000%', '歌之王子殿下', '日语', 'admin', NOW(), 'admin', NOW()),
+('勇気100%(忍者乱太郎 OP)', '光GENJI', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('バレンタイン・キッス', '国生さゆり', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('桜キッス/樱之吻(樱兰高校OP)', '河辺千恵子', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('旅の終わりに/旅途结束时', '河村隆一', '日语', 'admin', NOW(), 'admin', NOW()),
+('うまぴょい伝説/马儿蹦跳传说(赛马娘 ED)', '和氣あず未/高野麻里佳/Machico', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Butter-Fly(数码宝贝 OP)', '和田光司', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Around the World', 'MONKEY MAJIK', '日语', 'admin', NOW(), 'admin', NOW()),
+('太陽曰く燃えよカオス/太阳说燃烧吧混沌(潜行吧!奈亚子 OP)', '后ろから这いより队G', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('告白予行練習', '戸松遥', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('さよなら大好きな人/再见了 我最喜欢的人', '花*花', '日语', 'admin', NOW(), 'admin', NOW()),
+('Hello, Again～昔からある场所/在以前的某處(消灭都市 ED)', '花澤香菜', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('恋爱サーキュレーション/恋爱循环(化物语 OP)', '花泽香菜', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('sweets parade/糖果游行(妖狐×仆SS ED)', '花泽香菜', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('じょいふる/Joyful', '辉夜月', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ドラゴンエネルギー', '加藤純一/大石昌良', '日语', 'admin', NOW(), 'admin', NOW()),
+('Love Forever', '加藤ミリヤ/清水翔太', '日语', 'admin', NOW(), 'admin', NOW()),
+('さよならエレジー/告别挽歌', '菅田将晖', '日语', 'admin', NOW(), 'admin', NOW()),
+('まちがいさがし/寻找不同(完美世界)', '菅田将晖', '日语', 'admin', NOW(), 'admin', NOW()),
+('君をのせて/伴随着你(天空之城)', '井上杏美', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('となりのトトロ(龙猫)', '井上杏美', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('異邦人', '久保田早纪', '日语', 'admin', NOW(), 'admin', NOW()),
+('バラライカ/巴拉莱卡琴(偶像宣言)', '久住小春', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Happiness', '岚ARASHI', '日语', 'admin', NOW(), 'admin', NOW()),
+('Love so sweet', '岚ARASHI', '日语', 'admin', NOW(), 'admin', NOW()),
+('Monster(怪物小王子)', '岚ARASHI', '日语', 'admin', NOW(), 'admin', NOW()),
+('truth', '岚ARASHI', '日语', 'admin', NOW(), 'admin', NOW()),
+('ZERO!!(打工吧!魔王大人)', '栗林美奈实', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('小さきもの/小小的我(宝可梦)', '林明日香', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('unravel(东京喰种 OP)', '凛として時雨', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('DADDY! DADDY! DO!(輝夜姬 OP)', '铃木雅之/铃木爱理', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('This game(No Game No Life 游戏人生 OP)', '鈴木このみ', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('お正月', '滝廉太郎', '日语', 'admin', NOW(), 'admin', NOW()),
+('Shout Baby', '緑黄色社会', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('おジャ魔女カーニバル(小魔女DoReMi OP)', 'MAHO堂', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ヨワネハキ', 'MAISONdes/asmi・和ぬか', '日语', 'admin', NOW(), 'admin', NOW()),
+('ライオン/狮子座(超时空要塞 OP)', 'May'n/中岛爱', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('君に届け/好想告诉你(好想告诉你 ED)', 'MAY'S', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Everything(大和抚子)', 'MISIA', '日语', 'admin', NOW(), 'admin', NOW()),
+('main actor/主角', '美波', '日语', 'admin', NOW(), 'admin', NOW()),
+('カワキヲアメク/声嘶力竭(家有女友 OP)', '美波', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Night Cat', '美波七海', '日语', 'admin', NOW(), 'admin', NOW()),
+('Realize', '美波七海', '日语', 'admin', NOW(), 'admin', NOW()),
+('下剋上☆シンドローム/下克上☆症候群', '美波七海', '日语', 'admin', NOW(), 'admin', NOW()),
+('自己嫌惡★シンドローム/自我厭惡★症候群', '美波七海', '日语', 'admin', NOW(), 'admin', NOW()),
+('刹那主義症候群', '美波七海/美波八海', '日语', 'admin', NOW(), 'admin', NOW()),
+('loser', '米津玄師', '日语', 'admin', NOW(), 'admin', NOW()),
+('アイネクライネ/Eine Kleine', '米津玄师', '日语', 'admin', NOW(), 'admin', NOW()),
+('灰色と青', '米津玄師', '日语', 'admin', NOW(), 'admin', NOW()),
+('Lemon(Unnatural／非自然死亡)', '米津玄師', '日语', 'admin', NOW(), 'admin', NOW()),
+('ピースサイン/Peace Sign(我的英雄学院 OP)', '米津玄师', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('打ち上げ花火/打上花火(烟花)', '米津玄师/DAOKO', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('もののけ姫/幽灵公主', '米良美一', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('いつも何度でも/永远同在(千与千寻)', '木村弓', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('いのちの名前/生命的名字(千与千寻)', '木村弓', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('シャンパンゴールド(催眠麦克风)', '木島隆一', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('晓之车(机动战士高达SEED)', '南里侑香', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('火炎(多罗罗 OP)', '女王蜂', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Pretender', 'Official髭男dism', '日语', 'admin', NOW(), 'admin', NOW()),
+('PERFECT HUMAN', 'RADIO FISH', '日语', 'admin', NOW(), 'admin', NOW()),
+('おしゃかしゃま', 'RADWIMPS', '日语', 'admin', NOW(), 'admin', NOW()),
+('なんちって', 'RADWIMPS', '日语', 'admin', NOW(), 'admin', NOW()),
+('愛にできることはまだあるかい カラオケ(天気の子)', 'RADWIMPS', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('前前前世', 'RADWIMPS', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('狭心症', 'RADWIMPS', '日语', 'admin', NOW(), 'admin', NOW()),
+('大きな古時計/古老的大钟', '平井堅', '日语', 'admin', NOW(), 'admin', NOW()),
+('瞳をとじて/轻闭双眼(在世界中心呼唤爱)', '平井坚', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('god knows(凉宫春日)', '平野绫', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Jupiter', '平原绫香', '日语', 'admin', NOW(), 'admin', NOW()),
+('One Night Carnival', '氣志團', '日语', 'admin', NOW(), 'admin', NOW()),
+('キューティーハニー(甜心战士)', '前川陽子', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('クリスマス?なにそれ?美味しいの?', '前山田健一', '日语', 'admin', NOW(), 'admin', NOW()),
+('セーラー服と機関銃/水手服与机关枪', '橋本環奈', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ひまわりの約束/向日葵的约定(哆啦A梦：伴我同行)', '秦基博', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('アイ', '秦基博', '日语', 'admin', NOW(), 'admin', NOW()),
+('そばにいるね/留在我身边', '青山テルマ/SoulJa', '日语', 'admin', NOW(), 'admin', NOW()),
+('地上の星', '秋川雅史/古泽巌', '日语', 'admin', NOW(), 'admin', NOW()),
+('赤鼻のトナカイ/红鼻子的驯鹿(美少女戦士)', '三石琴乃/富沢美智恵/篠原恵美/深見梨加', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('明日晴れるかな/明天还会放晴吗(求婚大作战)', '桑田佳祐', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('サムライハート/武士之心', '森口博子', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('翼をください/给我一双翅膀', '山本润子', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('届かない恋(白色相簿2)', '上原れな', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Gee', '少女时代', '日语', 'admin', NOW(), 'admin', NOW()),
+('とびら开けて/打开心扉吧(冰雪奇缘)', '神田沙也加/津田英佑', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('津軽海峡・冬景色', '石川さゆり', '日语', 'admin', NOW(), 'admin', NOW()),
+('ふ･れ･ん･ど･し･た･い', '水瀬いのり/M・A・O/小澤亜李/高橋李依', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ETERNAL BLAZE', '水樹奈々', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('METANOIA', '水樹奈々', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('革命デュアリズム/革命Dualism(革命机Valvrave OP)', '水树奈奈/西川贵教', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Attakaindakaraa/あったかいんだからぁ♪', '水熊虫 クマムシ', '日语', 'admin', NOW(), 'admin', NOW()),
+('めざせポケモンマスター/目标是宝可梦大师(宝可梦 OP)', '松本梨香', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('レット・イット・ゴー～ありのままで～/Let It Go', '松隆子', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('やさしさに包まれたなら/若被温柔包围', '松任谷由実', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('赤いスイートピー/红色豌豆花', '松田圣子', '日语', 'admin', NOW(), 'admin', NOW()),
+('だんご3兄弟/丸子三兄弟', '速水健太郎/茂森亚由美/向日葵儿童/丸子合唱团', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('言叶のいらない约束/无需言语的约定(火影忍者疾风传 ED)', '锁那', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('可愛くなりたい/想要变得可爱(告白实行委员会)', '锁那', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('東京サマーセッション/东京夏日相会(告白实行委员会)', '锁那×CHiCO', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('年下の男の子', '糖果合唱团(キャンディーズ)', '日语', 'admin', NOW(), 'admin', NOW()),
+('MOON PRIDE(美少女战士Crystal OP)', '桃色幸运草Z', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('崖の上のポニョ(悬崖上的金鱼姬)', '藤岡藤巻/大桥望美', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('恋のヒメヒメぺったんこ/公主公主歌', '田村由香里/田村ゆかり', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('アンダーカバー(MILGRAM)', '天海由梨奈', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('PLATONIC GIRL', '天月/luz', 'ACG', 'admin', NOW(), 'admin', NOW()),
+(' かくしん的☆めたまるふぉ~ぜっ/革新性的小埋变身(干物妹！小埋 OP)', '田中爱美', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('海の声', '桐谷健太', '日语', 'admin', NOW(), 'admin', NOW()),
+('I love you', '尾崎豊', '日语', 'admin', NOW(), 'admin', NOW()),
+('DANZEN!ふたりはプリキュア/DANZEN!光之美少女', '五條真由美', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('世界の果てに君がいても/尽管你在世界的尽头(世界第一初恋2 OP)', '喜多修平', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('トリセツ/使用说明书', '西野加奈', '日语', 'admin', NOW(), 'admin', NOW()),
+('ファンサ/Fans(告白实行委员会)', '夏川椎菜', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('涙そうそう/泪光闪闪', '夏川りみ', '日语', 'admin', NOW(), 'admin', NOW()),
+('睡蓮花', '湘南乃風', '日语', 'admin', NOW(), 'admin', NOW()),
+('恋におちて -Fall in love-', '小林明子', '日语', 'admin', NOW(), 'admin', NOW()),
+('あわてんぼうのサンタクロース', '小林亜星', '日语', 'admin', NOW(), 'admin', NOW()),
+('言葉にできない', '小田和正', '日语', 'admin', NOW(), 'admin', NOW()),
+('恋(逃避虽可耻但有用)', '星野源', '日语', 'admin', NOW(), 'admin', NOW()),
+('うちで踊ろう (大晦日)/在我的世界里跳舞（除夕）', '星野源', '日语', 'admin', NOW(), 'admin', NOW()),
+('青春アミーゴ/青春amigo(野猪大改造)', '修二と彰', '日语', 'admin', NOW(), 'admin', NOW()),
+('三日月', '絢香', '日语', 'admin', NOW(), 'admin', NOW()),
+('タッチ(棒球英豪 OP)', '岩崎良美', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ハナミズキ/花水木', '一青窈', '日语', 'admin', NOW(), 'admin', NOW()),
+('キミがいれば/如果有你在', '伊織', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('甲賀忍法帖(甲贺忍法帖)', '阴阳座', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Don't say "lazy"(K-ON！ ED)', '樱高轻音部', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('ふわふわ时间/轻飘飘时间(K-ON！)', '樱高轻音部', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('香水', '瑛人', '日语', 'admin', NOW(), 'admin', NOW()),
+('ドライフラワー/干花', '優里', '日语', 'admin', NOW(), 'admin', NOW()),
+('ベテルギウス/参宿四(SUPER RICH)', '優里', '日语', 'admin', NOW(), 'admin', NOW()),
+('Beautiful World', '宇多田光', '日语', 'admin', NOW(), 'admin', NOW()),
+('COLORS', '宇多田光', '日语', 'admin', NOW(), 'admin', NOW()),
+('Flavor Of Life(花样男子2)', '宇多田光', '日语', 'admin', NOW(), 'admin', NOW()),
+('Goodbye Happiness', '宇多田光', '日语', 'admin', NOW(), 'admin', NOW()),
+('HEART STATION', '宇多田光', '日语', 'admin', NOW(), 'admin', NOW()),
+('One Last Kiss', '宇多田光', '日语', 'admin', NOW(), 'admin', NOW()),
+('prisoner of Love(Last Friends)', '宇多田光', '日语', 'admin', NOW(), 'admin', NOW()),
+('Simple And Clean', '宇多田光', '日语', 'admin', NOW(), 'admin', NOW()),
+('Stay gold', '宇多田光', '日语', 'admin', NOW(), 'admin', NOW()),
+('ぼくはくま', '宇多田光', '日语', 'admin', NOW(), 'admin', NOW()),
+('光', '宇多田光', '日语', 'admin', NOW(), 'admin', NOW()),
+('you', '癒月', '日语', 'admin', NOW(), 'admin', NOW()),
+('LOVEマシーン/LOVE MACHINE', '早安少女组/モーニング娘。'22', '日语', 'admin', NOW(), 'admin', NOW()),
+('タイヨウのうた/太阳之歌', '沢尻エリカ', '日语', 'admin', NOW(), 'admin', NOW()),
+('トイレの神様/厕所的神明', '植村花菜', '日语', 'admin', NOW(), 'admin', NOW()),
+('空色デイズ(天元突破 OP)', '中川翔子', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('GLAMOROUS SKY(nana)', '中岛美嘉', '日语', 'admin', NOW(), 'admin', NOW()),
+('雪之华/雪の華', '中岛美嘉', '日语', 'admin', NOW(), 'admin', NOW()),
+('糸/线', '中岛美雪', '日语', 'admin', NOW(), 'admin', NOW()),
+('銀の龍の背に乗って/骑在银龙的背上', '中岛美雪', '日语', 'admin', NOW(), 'admin', NOW()),
+('にんげんっていいな/做人类真好(漫画日本昔话 ED)', '中島義実/ヤング・フレッシュ', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('366日(赤い糸红线)', '仲宗根泉', '日语', 'admin', NOW(), 'admin', NOW()),
+('PONPONPON', '竹村桐子', '日语', 'admin', NOW(), 'admin', NOW()),
+('ファッションモンスター/FASHION MONSTER', '竹村桐子', '日语', 'admin', NOW(), 'admin', NOW()),
+('バランスKISS/BALANCE KISS(亲吻姐姐 OP)', '竹达彩奈', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('丸の内サディスティック/丸内虐待狂', '椎名林檎', '日语', 'admin', NOW(), 'admin', NOW()),
+('バレンタインキッス/情人节之吻', '走廊奔跑队 渡り廊下走り队7', '日语', 'admin', NOW(), 'admin', NOW()),
+('秒針を噛む/噬咬秒针', 'ずっと真夜中でいいのに。', '日语', 'admin', NOW(), 'admin', NOW()),
+('青いベンチ/蓝色长椅', 'テゴマス/手越增田', '日语', 'admin', NOW(), 'admin', NOW()),
+('ようこそジャパリパークへ/欢迎来到加帕利动物园(兽娘动物园OP)', 'どうぶつビスケッツ (动物饼干)/PPP', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('メンヘラ', 'ミオヤマザキ', 'ACG', 'admin', NOW(), 'admin', NOW()),
+('Butterfly', '木村KAELA', '日语', 'admin', NOW(), 'admin', NOW()),
+('prpr', '美波七海', '日语', 'admin', NOW(), 'admin', NOW()),
+('SILENCE', 'AVANNA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('GO!!!(火影忍者 OP)', 'FLOW', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('グッバイ宣言/再见宣言', 'FloweR', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ECHO', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('インビジブル/nvisible', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('初恋の絵本', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('地球最後の告白を', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('envycat blackout/灯火俱灭妒猫夜', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('放課後ストライド/放学后疾走', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('告白ライバル宣言/告白对手宣言', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('KiLLER LADY', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('KING', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('LUVORATORRRRRY!', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Masked bitcH', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('イカサマライフゲーム', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('キリトリセン', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('皆殺しのマジック', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('金曜日のおはよう/星期五的早上好', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('恋愛勇者', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('名前のない星/没有名字的星', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('人生リセットボタン/人生Reset Button', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Rumor/謠言', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('弱虫モンブラン/胆小鬼蒙布朗', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('世界寿命と最後の一日/世界终结与最后一日', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('天ノ弱', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('心做し/心理作用', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('夜もすがら君想ふ/夜里也一直想着你', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('イカサマライフゲイム/虚伪的人生游戏', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('カミサマネジマキ/神明发条', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('シリョクケンサ/视力检查', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('しわ/皱纹', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('セツナトリップ/刹那旅程', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ダヴィンチの告白/达芬奇的告白', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ドーナツホール/Donut Hole', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('バレリーコ/芭蕾舞者', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('パンダヒーロー', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ホシアイ/七夕', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ポジティブシンキング/乐观的心态', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ポーカーフェイス/Poker Face', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('八月の風', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('敗北の少年', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('拝啓ドッペルゲンガー', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('マーシャルの嬌声', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('モザイクロール/马赛克卷', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Tokio Funka', 'GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('世界は恋に落ちている/我的世界已坠入爱河', 'GUMI/CHiCO', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('過食性：アイドル症候群/过食性：偶像症候群', 'GUMI/MAYU', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Alice in 冷冻库', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('DAYBREAK FRONTLINE/黎明前线', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('空想フォレスト/空想森林', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('六兆年と一夜物语/六兆年零一夜的故事', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('如月アテンション/如月專注', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Summer time record/夏令时记录', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('夜咄ディセイブ/夜谈欺骗', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('影炎≒Variation', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('雨き声残響', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('アウターサイエンス/界外科学', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('アスノヨゾラ哨戒班/明日的夜空哨戒班', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('サマータイムレコード/夏时记录', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('チルドレンレコード/孩童记录', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ロスタイムメモリー/回忆补时', 'IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ELECT', 'Lily', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('-ERROR', 'Lily', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('GLIDE/滑翔', 'Lily', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('wave', 'Lily', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ジッタードール /Jitter Doll', 'Lily', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('リリリリ★バーニングナイト/Riririri ★ Burning Night', 'Lily', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('平面説', 'Lily', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('夕立のりぼん/雨落如带', 'MAYU', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('絶対音楽で踊れ/绝对的音乐舞蹈', 'V flower', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('イノコリ先生/留堂老师', 'v flower', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('シャルル/夏露露', 'v flower', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ベノム/猛毒', 'v flower', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ボッカデラベリタ/真理之口', 'V flower', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Cynic', '暗音Renri', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('1925', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('2次元ドリームフィーバー', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ARiA', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Black Board', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Calc.', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Carry Me Off', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('DOGMA', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('FREELY TOMORROW/自由明天', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('glow', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('HEAVEN', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ODDS&ENDS', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Party Junkie', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Tell your world', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('アイロニ/Irony', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('白い雪のプリンセスは/白如雪的公主啊', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('頓珍漢の宴/七零八落的宴会', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('二息步行', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('今好きになる。/我于此刻恋上你。', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('千本桜', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('水色侵略', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('妄想感伤代偿联盟', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('夜明けと蛍/黎明与萤火', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('乙女解剖', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('転校前夜', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('おじゃま虫/麻烦鬼', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('アニマル/Animal', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('アンチビート/Antibeat', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('アンドロイドガール/Android Girl', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('アンハッピーリフレイン/Unhappy Refrain', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('からくりピエロ/活动小丑', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('キャットフード/Cat Food', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ゴーストルール/幽灵法则', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ショットガン・ラヴァーズ/Shotgun Lovers', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ストリーミングハート/Streaming Heart', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ダンスロボットダンス/Dance Robot Dance', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ニュース39/News 39', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ネコミミアーカイブ/猫耳备档', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ハイドアンド・シーク/Hide And Seek', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('バイビーベイビーサヨウナラ/Bye Baby 再见', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ビバハピ/Viva Happy', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ピエロ/小丑', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ヒビカセ/让其响彻', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ブラック★ロックシューター/BLACK★ROCK SHOOTER', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('愛言葉II', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('愛言葉Ⅲ', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('初音ミクが円周率10, 000桁覚えたようです / 圆周率之歌', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('初音ミクの激唱/初音未来的激唱', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('初音ミクの消失/初音未来的消失', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('毒占欲', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Electro Satchurator/电子饱和器', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('歌に形はないけれど/虽然歌声无形', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('回る空うさぎ/月兔回旋于空中', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('惑星ループ/行星环', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('裏表ラバーズ/里表情人', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('魔法少女幸福論', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('気まぐれメルシィ/反覆无常的宽赦', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('砂の惑星/砂之行星', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('深海少女', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('神教⇒Exclamation!', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('神っぽいな/像神一样呐', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('妄想税', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('妄想スケッチ/妄想素描本', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('小夜子', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('心拍数#0822', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('幽霊東京/幽灵东京', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('アウトサイダー/局外人', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('アカイト/红线', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('イジワルな出会い/坏心眼的相遇', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('え?あぁ、そう。/咦？啊啊，是喔。', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('エンヴィキャットウォーク/令人嫉妒的猫步', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('カゲロウデイズ/阳炎眩乱', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('キレキャリオン/切吧 Carry On', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('こちら、幸福安心委員会です。/这里是、幸福安心委员会', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('こっち向いて Baby', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('こっち向いてBaby/ 看向我这边 宝贝', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('グラーヴェ/Gravé', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('サラマンダー/沙罗曼蛇/Salamander', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('シンデレラ/灰姑娘', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('セイシュンライナー/青春直球', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('だんだん早くなる/逐渐加快', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('エイリアンエイリアン/Alien Alien', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('テオ/将手', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('トリノコシティ/Torinoko City', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ドラマツルギー/拟剧论', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ドレミファロンド/音阶圆舞曲', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ネトゲ廃人シュプレヒコール/网游废人齐颂曲', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ハートアラモード/Heart a la mode', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('バビロン/ 巴比伦', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ヒバナ/火花', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ブリキノダンス/马口铁之舞', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('メリュー', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('メルト/Melt', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('恋愛フィロソフィア/恋爱哲学', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ヨンジュウナナ/四十七', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ライアーダンス/Liar Dance', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ラズベリー＊モンスター/树莓*怪物', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('リバーシブル・キャンペーン/双面・作战', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ロミオとシンデレラ/罗密欧与辛德瑞拉', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ローリンガール/Rolling Girl', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ワールドイズマイン/世界第一的公主殿下', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('高音厨音域テスト /高音厨音域测试', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('命に嫌われている。/被生命所厌恶。', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('太阳系デスコ/太阳系DISCO', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ヴァンパイア/吸血鬼', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('サリシノハラ/离去之原', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('＊ハロー、プラネット/Hello planet', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ジレンマ', '初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Ready Steady', '初音ミク/镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Shake it!', '初音ミク/镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Blessing', '初音ミク/镜音双子/巡音ルカ/KAITO/MEIKO', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('B.B.F.', '初音ミク/鏡音りん', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Gimme×Gimme', '初音ミク/鏡音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('クノイチでも恋がしたい/女忍者也想要谈恋爱', '初音ミク/鏡音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('神のまにまに/神的随波逐流', '初音ミク/镜音リン/GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('泣キ虫カレシ/爱哭鬼男朋友', '初音ミク/鏡音レン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('magnet', '初音ミク/巡音ルカ', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('リンちゃんなう！/铃酱Now!', '初音ミク/巡音ルカ', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ワールドエンド・ダンスホール/World\'s End Dancehall', '初音ミク/巡音ルカ', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Mr.Music', '初音ミク/巡音ルカ/镜音双子/Megpoid/歌爱雪', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('一心不乱', '初音ミク/巡音ルカ/GUMI/IA/鏡音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('パラノイド /paranoid', '初音ミク/重音teto', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('脳浆炸裂ガール/脑浆炸裂少女', '初音ミク/GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('真夜中遊園地', '初音ミク/GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('マトリョシカ/俄罗斯套娃', '初音ミク/GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ロメオ/罗密欧', '初音ミク/GUMI/鏡音レン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('空奏列車', '初音ミク/IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('デリヘル呼んだら君が来た/我叫了应召女郎然后你就来了', '初音ミク/IA', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('独りんぼエンヴィー/孑然妒火', '初音ミクAppend', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ハロ／ハワユ   Hello／How are you', '初音ミクSoft', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('いかないで/别走', '歌爱雪', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('大嫌いなはずだった。/本应是讨厌的。', 'GUMI/初音ミク', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('1 2 fan club', 'GUMI/镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('嗚呼、素晴らしきニャン生/啊啊，美妙的喵生', 'GUMI/鏡音レン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('chocolate box', '镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('病名は愛だった/病名为爱', '镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('劣等上等', '镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('右肩の蝶', '镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('再教育', '镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('い～やい～やい～や/随便～随便～随便～', '镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('イカサマ⇔カジノ/欺骗⇔赌场', '镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('おおかみは赤ずきんに恋をした/大灰狼爱上了小红帽', '镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('しんでしまうとはなさけない！/就这样死了也太没出息了', '镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ジャバヲッキー・ジャバヲッカ', '镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ハウトゥー世界征服', '镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('リモコン/遥控器', '镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Happy Halloween', '镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('イーガー♥ビリーバー/Eager♥Believer', '鏡音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('トゥインクル/Twinkle', '镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ロキ/Roki', '镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('东京テディベア/东京泰迪熊', '镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('炉心融解', '鏡音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('馬鹿はアノマリーに憧れる', '鏡音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('繰り返し一粒/不断被替换的渺小存在', '鏡音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('天楽/天樂', '镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('イドラのサーカス/谬见的马戏团', '镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('スキキライ/喜欢讨厌', '镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('メランコリック/忧郁的心情', '镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ロストワンの号哭/Lost One的号哭', '镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Fire◎Flower', '鏡音レン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('かなしみのなみにおぼれる/伤潮溺亡', '鏡音レン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('アトラクトライト/Attract Light', '鏡音レン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ギガンティックO.T.N/Gigantic O.T.N', '鏡音レン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ジグソーパズル/拼图游戏', '镜音レン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('テレキャスタービーボーイ/Telecaster B-boy', '鏡音レン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('聖槍爆裂ボーイ/圣枪爆裂男孩', '鏡音レン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('脱法ロック/逃避法律摇滚', '鏡音レン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('カンタレラ/坎特雷拉', 'KAITO（初音未来和声）', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('何でも言うことを闻いてくれるアカネチャン/Seyana.', '琴叶茜/结月ゆかり/弦卷マキ/琴叶葵', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ダーリン/Darling', '西野カナ', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('MIRA', '小春六花', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Hello, Worker', '巡音ルカ', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Hello,Worker', '巡音ルカ', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Just Be Friends/僅友如此', '巡音ルカ', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Leia', '巡音ルカ', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Magician\'s operation', '巡音ルカ', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('インタビュア/Interviewer', '巡音ルカ', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ルカルカ★ナイトフィーバー/LUKALUKA★NIGHT FEVER', '巡音ルカ', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('+♂/Plus男子', '巡音ルカ/初音ミク/GUMI/镜音双子', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('jewel', '巡音ルカ/初音ミク/GUMI/IA/鏡音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('虎视眈々/虎视眈眈', '巡音ルカ/初音ミク/GUMI/IA/镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('威风堂々/威风堂堂', '巡音ルカ/初音ミク/GUMI/IA/镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('一骑当千', '巡音ルカ/初音ミク/GUMI/IA/镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('疑心暗鬼', '巡音ルカ/初音ミク/GUMI/IA/镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Love Me If You Can', '巡音ルカ/初音ミク/GUMI/IA/镜音リン', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('ハッピーシンセサイザ/快乐合成器', '巡音ルカ/GUMI', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('吉原ラメント/吉原哀歌', '重音teto', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('おちゃめ機能/天真烂漫机能', '重音Teto', 'VOCALOID', 'admin', NOW(), 'admin', NOW()),
+('Tomorrow', 'Annie', '英语', 'admin', NOW(), 'admin', NOW()),
+('Somewhere Over the Rainbow', 'Ariana Grande', '英语', 'admin', NOW(), 'admin', NOW()),
+('What I\'ve Been Looking For', 'Ashley Tisdale/Lucas Grabeel', '英语', 'admin', NOW(), 'admin', NOW()),
+('What I\'ve Been Looking For', 'Ashley Tisdale/Lucas Grabeel', '英语', 'admin', NOW(), 'admin', NOW()),
+('The Tide is high(新成长的烦恼)', 'Atomic Kitten', '英语', 'admin', NOW(), 'admin', NOW()),
+('Girlfriend', 'Avril Lavigne', '英语', 'admin', NOW(), 'admin', NOW()),
+('What The Hell', 'Avril Lavigne', '英语', 'admin', NOW(), 'admin', NOW()),
+('Keep Holding On', 'Avril Lavinge', '英语', 'admin', NOW(), 'admin', NOW()),
+('The Rose', 'Bette Midler', '英语', 'admin', NOW(), 'admin', NOW()),
+('From a Distance', 'Bette Midler', '英语', 'admin', NOW(), 'admin', NOW()),
+('The Time (Dirty Bit)', 'Black Eyed Peas', '英语', 'admin', NOW(), 'admin', NOW()),
+('A Whole New World', 'Brad Kane', '英语', 'admin', NOW(), 'admin', NOW()),
+('Hold It Against Me', 'Britney Spears', '英语', 'admin', NOW(), 'admin', NOW()),
+('Toxic', 'Britney Spears', '英语', 'admin', NOW(), 'admin', NOW()),
+('Grenade', 'Bruno Mars', '英语', 'admin', NOW(), 'admin', NOW()),
+('The Lazy Song', 'Bruno Mars', '英语', 'admin', NOW(), 'admin', NOW()),
+('Call me maybe', 'Carly Rae Jepsen', '英语', 'admin', NOW(), 'admin', NOW()),
+('My Heart Will Go On/我心永恒(泰坦尼克号)', 'Celine Dion', '英语', 'admin', NOW(), 'admin', NOW()),
+('let it go', 'Demi Lovato', '英语', 'admin', NOW(), 'admin', NOW()),
+('Paprika', 'Foorin team E', '英语', 'admin', NOW(), 'admin', NOW()),
+('Cyberangel(崩坏3)', 'Hanser', '英语', 'admin', NOW(), 'admin', NOW()),
+('We\'re All In This Together(歌舞青春)', 'High School Musical', '英语', 'admin', NOW(), 'admin', NOW()),
+('Breaking Free(歌舞青春)', 'High School Musical/Gabrilla&Troy Bolton', '英语', 'admin', NOW(), 'admin', NOW()),
+('Start of Something New(歌舞青春)', 'High School Musical/Gabrilla&Troy Bolton', '英语', 'admin', NOW(), 'admin',
+ NOW()),
+('What Dreams Are Made Of', 'Hilary Duff', '英语', 'admin', NOW(), 'admin', NOW()),
+('On The Floor', 'Jennifer Lopez', '英语', 'admin', NOW(), 'admin', NOW()),
+('Take Me Home, Country Roads', 'John Denver', '英语', 'admin', NOW(), 'admin', NOW()),
+('Don\'t Stop Believin', 'Journey', '英语', 'admin', NOW(), 'admin', NOW()),
+('Don\'t Stop Believing', 'Journey', '英语', 'admin', NOW(), 'admin', NOW()),
+('Do-Re-Mi', 'Julie Andrews/The Children', '英语', 'admin', NOW(), 'admin', NOW()),
+('Baby', 'Justin Bieber', '英语', 'admin', NOW(), 'admin', NOW()),
+('POP/STARS', 'K/DA', '英语', 'admin', NOW(), 'admin', NOW()),
+('I Vow To Thee, My Country', 'Katherine Jenkins', '英语', 'admin', NOW(), 'admin', NOW()),
+('Firework', 'Katy Perry', '英语', 'admin', NOW(), 'admin', NOW()),
+('I kissed a girl', 'Katy Perry', '英语', 'admin', NOW(), 'admin', NOW()),
+('last Friday night', 'Katy Perry', '英语', 'admin', NOW(), 'admin', NOW()),
+('Teenage Dream', 'Katy Perry', '英语', 'admin', NOW(), 'admin', NOW()),
+('amazing grace/奇异恩典', 'Kellie', '英语', 'admin', NOW(), 'admin', NOW()),
+('Do You Want to Build a Snowman', 'Kristen Bell', '英语', 'admin', NOW(), 'admin', NOW()),
+('CRAZY FOR YOU', 'Kylee', '英语', 'admin', NOW(), 'admin', NOW()),
+('bad romance', 'Lady Gaga', '英语', 'admin', NOW(), 'admin', NOW()),
+('Born This Way', 'Lady Gaga', '英语', 'admin', NOW(), 'admin', NOW()),
+('Paparazzi', 'Lady Gaga', '英语', 'admin', NOW(), 'admin', NOW()),
+('Poker Face', 'Lady Gaga', '英语', 'admin', NOW(), 'admin', NOW()),
+('Telephone', 'Lady Gaga', '英语', 'admin', NOW(), 'admin', NOW()),
+('The Edge Of Glory', 'Lady GaGa', '英语', 'admin', NOW(), 'admin', NOW()),
+('Rain On Me', 'Lady Gaga/Ariana Grande', '英语', 'admin', NOW(), 'admin', NOW()),
+('All I Want For Christmas Is You', 'Mariah Carey', '英语', 'admin', NOW(), 'admin', NOW()),
+('We Are The World', 'Michael Jackson', '英语', 'admin', NOW(), 'admin', NOW()),
+('The Best Of Both Worlds(汉娜蒙塔娜)', 'Miley Curys', '英语', 'admin', NOW(), 'admin', NOW()),
+('The climb', 'Miley Curys', '英语', 'admin', NOW(), 'admin', NOW()),
+('The Muffin Man', 'Muffin Songs', '英语', 'admin', NOW(), 'admin', NOW()),
+('Speechless', 'Naomi Scott', '英语', 'admin', NOW(), 'admin', NOW()),
+('Fuckin\' Perfect', 'P!nk', '英语', 'admin', NOW(), 'admin', NOW()),
+('Into the Unknown', 'Panic! At the Disco', '英语', 'admin', NOW(), 'admin', NOW()),
+('Burn It All Down/不可阻挡（2021英雄联盟全球总决赛主题曲）', 'PVRIS', '英语', 'admin', NOW(), 'admin', NOW()),
+('Shut up and Kiss Me', 'Reece Mastin', '英语', 'admin', NOW(), 'admin', NOW()),
+('Take A Bow', 'Rihanna', '英语', 'admin', NOW(), 'admin', NOW()),
+('Scarborough fair', 'Sarah Brightman', '英语', 'admin', NOW(), 'admin', NOW()),
+('Scatman', 'Scatman John', '英语', 'admin', NOW(), 'admin', NOW()),
+('Bop To The Top', 'Sharpay Evan', '英语', 'admin', NOW(), 'admin', NOW()),
+('Tom\'s Diner', 'Suzanne Vega', '英语', 'admin', NOW(), 'admin', NOW()),
+('All The Things She Said', 't.A.T.u.', '英语', 'admin', NOW(), 'admin', NOW()),
+('Love Story', 'Taylor Swift', '英语', 'admin', NOW(), 'admin', NOW()),
+('Shake It Off', 'Taylor Swift', '英语', 'admin', NOW(), 'admin', NOW()),
+('Stay', 'The Kid LAROI/Justin Bieber', '英语', 'admin', NOW(), 'admin', NOW()),
+('Edelweiss/雪绒花(音乐之声)', 'The Sound of Music', '英语', 'admin', NOW(), 'admin', NOW()),
+('Last Christmas', 'Wham!', '英语', 'admin', NOW(), 'admin', NOW()),
+('Greatest Love Of All', 'Whitney Houston', '英语', 'admin', NOW(), 'admin', NOW()),
+('TOMORROW', '冈本真夜', '英语', 'admin', NOW(), 'admin', NOW()),
+('History Maker(YURI!!! on ICE OP)', '藤冈靛', '英语', 'admin', NOW(), 'admin', NOW()),
+('Starfall(崩坏3)', '袁娅维', '英语', 'admin', NOW(), 'admin', NOW()),
+('Rubia(崩坏3)', '周深', '英语', 'admin', NOW(), 'admin', NOW()),
+('London Bridge Is Falling Down', '', '英语', 'admin', NOW(), 'admin', NOW()),
+('Twinkle Twinkle Little Star', '', '英语', 'admin', NOW(), 'admin', NOW()),
+('We Wish You a Merry Christmas', '', '英语', 'admin', NOW(), 'admin', NOW());
 
+
+-- ---中文-------------------------
+-- Table,structure for user
 -- ----------------------------
--- Table structure for user
--- ----------------------------
-INSERT INTO `user` (`user_id`, `user_name`, `password`, `status`, `create_by`, `create_time`, `update_by`, `update_time`) VALUES (1, 'admin', '$2a$10$THJaKjA.PHhMXwNvDasp3egCjsJe8OGXlA96D7BIUaRGEGPk8EkF.', 1, 'admin', NOW(), 'admin', NOW());
+INSERT INTO `user` (`user_id`, `user_name`, `password`, `status`, `create_by`, `create_time`, `update_by`,
+                    `update_time`)
+VALUES (1, 'admin', '$2a$10$THJaKjA.PHhMXwNvDasp3egCjsJe8OGXlA96D7BIUaRGEGPk8EkF.', 1, 'admin', NOW(), 'admin', NOW());

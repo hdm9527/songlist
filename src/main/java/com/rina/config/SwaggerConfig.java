@@ -31,7 +31,7 @@ public class SwaggerConfig {
 	public Docket createRestApi() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.useDefaultResponseMessages(false)
-				.apiInfo(apiInfo())
+				//.apiInfo(apiInfo())
 				.select()
 				.apis(RequestHandlerSelectors.basePackage("com.rina.controller"))
 				.paths(PathSelectors.any())
